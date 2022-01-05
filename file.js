@@ -4,56 +4,56 @@ const STUDIENTS = [{
     img: "https://lms.ithillel.ua/uploads/images/885d3b77fc0d39a12aad31af709b9bd6.jpg",
     name: 'Антон',
     lastName: 'Чебикін',
-    homework: 9,
+    homework: 11,
     score: 898,
 },
 {
     img: "https://lms.ithillel.ua/uploads/images/e6ef3cc070c3d4c97a46f984b94e3436.jpg",
     name: 'Borys',
     lastName: 'Mukhatasov',
-    homework: 7,
+    homework: 10,
     score: 697,
 },
 {
     img: "https://lms.ithillel.ua/uploads/images/d1b3870e354c2d9668b8cd64e63bbf37.jpg",
     name: 'Oleksanra',
     lastName: 'Kushniruk',
-    homework: 8,
+    homework: 10,
     score: 687,
 },
 {
     img: "https://lms.ithillel.ua/uploads/images/7e0475ff04937622a8aa27a8d38be520.jpg",
     name: 'Oleksandr',
     lastName: 'Odintsov',
-    homework: 7,
+    homework: 9,
     score: 680,
 },
 {
     img: "https://lms.ithillel.ua/uploads/images/0fd3a6a4e07969f0dcb87452a6ba2d5f.jpg",
     name: 'David',
     lastName: 'Vashenko',
-    homework: 7,
+    homework: 9,
     score: 675,
 },
 {
     img: "https://lms.ithillel.ua/uploads/images/5d6a97aefe779d59786a11f9063d1ff0.jpg",
     name: 'Oleksandr',
     lastName: 'Yaremenko',
-    homework: 7,
+    homework: 8,
     score: 657,
 },
 {
     img: "https://lms.ithillel.ua/uploads/images/b86e405b95a95b5011f856ad81f4c6a5.jpg",
     name: 'Антон',
     lastName: 'Сквирский',
-    homework: 7,
+    homework: 8,
     score: 648,
 },
 {
     img: "https://lms.ithillel.ua/uploads/images/74ad3ec0535885ce0d279a4181b27760.jpg",
     name: 'Evheny',
     lastName: 'Shpaka',
-    homework: 6,
+    homework: 7,
     score: 578,
 },
 {
@@ -79,7 +79,11 @@ const STUDIENTS = [{
 }
 ];
 
- STUDIENTS.forEach(function (element) {
+const topScoreStudents = STUDIENTS.filter(function (elm) {
+    return elm.score > 600;
+});
+
+ topScoreStudents.forEach(function (element) {
     document.getElementById("app").insertAdjacentHTML(
       "beforeend",
       `
